@@ -1,0 +1,92 @@
+@mixin font-14_red {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #af1212;
+    line-height: 24px;
+}
+
+@mixin font-16_white {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 26px;
+}
+
+@mixin font-16_black {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 26px;
+}
+
+@mixin font-16-red {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #af1212;
+    line-height: 26px;
+}
+
+@mixin font-18-red {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #af1212;
+    line-height: 28px;
+}
+
+@mixin font-22-white {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 32px;
+}
+
+@mixin font-22-black {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    line-height: 32px;
+}
+
+@mixin font-22-red {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #af1212;
+    line-height: 32px;
+}
+
+@mixin font-42 {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    line-height: 52px;
+}
+
+@mixin font-58 {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    color: #000;
+    line-height: 70px;
+}
+
+@mixin font-58-white {
+    font-family: "Merriweather", Helvetica, Arial, sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 70px;
+}
+
+@mixin a-none {
+    text-decoration: none;
+    color: #fff;
+}
