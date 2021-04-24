@@ -1,0 +1,163 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 125px;
+    padding-bottom: 40px;
+
+    &__head {
+        color: $white;
+        text-align: center;
+
+        &-title {
+            font-size: 72px;
+        }
+
+        &-subtitle {
+            margin-top: 35px;
+            line-height: 32px;
+            font-size: 22px;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+    }
+
+    &__subhead {
+        &-input {
+            margin-top: 50px;
+            width: 320px;
+            height: 60px;
+            outline: none;
+            background: $red;
+            border-radius: 35px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            text-align: start;
+            padding-left: 30px;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: $main-font;
+        }
+
+        &-btn {
+            width: 130px;
+            height: 60px;
+            border: 2px solid $black;
+            background: $black;
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        &-link {
+            margin-top: 40px;
+            color: rgba(255, 255, 255, 0.4);
+
+            & a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.4);
+            }
+
+            & a:hover {
+                transition-duration: 1s;
+                color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+.intro__subhead-input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    transition: opacity 0.5s linear;
+}
+
+.intro__subhead-input:focus::placeholder {
+    opacity: 0;
+}
+
+.intro__subhead-input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    transition: opacity 0.5s linear;
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .intro {
+        &__head {
+            &-title {
+                font-size: 42px;
+            }
+            &-subtitle {
+                font-size: 18px;
+            }
+        }
+        &__subhead {
+            &-link {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            &-btn {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .intro__subhead {
+        &-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-input {
+            width: 310px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        &-btn {
+            margin: 0;
+            margin-top: 20px;
+            width: 115px;
+            height: 50px;
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .intro {
+        margin-top: 70px;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+
+        &__head {
+            &-title {
+                font-size: 35px;
+            }
+
+            &-subtitle {
+                font-size: 14px;
+            }
+            &__subhead {
+                &-input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

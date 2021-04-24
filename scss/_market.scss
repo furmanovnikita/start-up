@@ -1,0 +1,256 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.market {
+    padding: 100px 0;
+
+    &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-text {
+            padding: 0 15px;
+            width: 100%;
+
+            &-title {
+                margin-bottom: 25px;
+                @include font-title;
+                color: $black;
+                letter-spacing: 0.5px;
+            }
+
+            &-subtitle {
+                @include font-standart;
+                color: $red;
+            }
+
+            &-btn {
+                margin-top: 60px;
+                width: 256px;
+                height: 60px;
+                border: 2px solid $black;
+                background: $black;
+                color: $white;
+                font-size: 20px;
+                font-weight: 600;
+                border-radius: 50px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+
+        &_img {
+            padding: 0 15px;
+
+            &-product {
+                
+                &-link:hover {
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+    
+                &-img {
+                    border-radius: $radius-10;
+                }
+            }
+        }
+    }
+
+    &__sell {
+        margin: 70px -15px 0 -15px;
+        display: flex;
+        justify-content: space-between;
+    
+        &-unit {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 0 15px 0 15px;
+    
+            &-item {
+                &-img {
+                    border-radius: $radius-10;
+                
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &-price {
+                margin-left: 40px;
+            
+                &-title {
+                    @include font-small;
+                    color: $black;
+                    letter-spacing: 2px;
+                }
+            
+                &-subtitle {
+                    @include font-standart;
+                    color: $red;
+                    margin-top: 5px;
+                    width: 100%;
+                }
+            
+                &-block {
+                    display: flex;
+                    align-items: flex-end;
+
+                    &-link {
+                        margin-top: 28px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 75px;
+                        height: 40px;
+                        border: 2px solid #ededed;
+                        border-radius: 50px;
+                        color: $black;
+                    
+                        &:hover {
+                            border-color: #7e7e7e;
+                        }
+                    }   
+                }
+            }
+        }
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 992px) {
+    .market {
+        &__block {
+            flex-direction: column;
+            text-align: center;
+
+            &-text-subtitle {
+                font-size: 20px;
+            }
+
+            &-img {
+                margin-top: 30px;
+            }
+        }
+
+        &__sell {
+            flex-direction: column;
+            align-items: center;
+
+            &-unit {
+                justify-content: flex-start;
+                width: 60%;
+
+                &-price {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    &-title {
+                        font-size: 18px;
+                    }
+
+                    &-subtitle {
+                        margin-top: 15px;
+                        font-size: 20px;
+                    }
+
+                    &-block-link {
+                        width: 80px;
+                        height: 50px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    
+    .market {
+        &__block {
+            &-text {
+                &-title {
+                    font-size: 35px;
+                    line-height: 50px;
+                    letter-spacing: 0;
+                }
+            }
+
+            &-img-product-img {
+                width: 70%;
+            }
+
+        }
+
+        &__sell {
+            &-unit {
+                width: 100%;
+        
+                &-price-title {
+                    font-size: 16px;
+                }
+        
+                &-price-subtitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }    
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .market {
+        padding: 50px 0;
+
+        &__block-img-product-img {
+            width: 70%;
+        }
+
+        &__sell {
+            margin-top: 50px;
+            &-unit {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .market {
+        &__sell {
+            &-unit-price {
+                &-title {
+                    font-size: 14px;
+                }
+
+                &-subtitle {
+                    font-size: 14px;
+                }
+
+                &-block-link {
+                    width: 70px;
+                    height: 40px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &__block-text {
+            &-btn {
+                width: 100%;
+            }
+
+            &-text-subtitle {
+                font-size: 17px;
+            }
+        }    
+    }
+}      

@@ -1,0 +1,57 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.frame {
+    padding: 110px 0 95px 0;
+    text-align: center;
+
+    &__title {
+        @include font-title;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include font-large;
+        color: $red;
+    }
+
+    &__btn {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        width: 263px;
+        height: 60px;
+        border: 2px solid $black;
+        background: $black;
+        color: $white;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__text {
+        @include font-standart;
+        color: $red;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .frame {
+        padding: 10px 20px 95px 20px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .frame {
+        &__title {
+            font-size: 42px;
+        }
+
+        &__btn {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,307 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.article {
+    margin-top: 195px;
+
+    &__text {
+
+        &-head {
+            @include font-subtitle;
+            margin-bottom: 15px;
+        }
+        &-subhead {
+            @include font-medium;
+            color:$red;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__photo {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    
+        &-left {
+            width: 50%;
+            max-height: 720px;
+            display: flex;
+            flex-wrap: wrap;
+            
+            &-col {
+                &-wide {
+                    background: url(../img/blog_2_img_1.jpg) center center / cover no-repeat;
+                    width: 570px;
+                    height: 270px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    border-radius: $radius-10;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        background-color: rgba(175, 18, 18, 0.4);
+                        border-radius: $radius-10;
+                    }
+                }
+
+                &-regular {
+                    background: url(../img/blog_2_img_2.jpg) center center / cover no-repeat;
+                    width: 270px;
+                    height: 390px;
+                    margin-right: 30px;
+                    position: relative;
+                    border-radius: $radius-10;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        background-color: rgba(175, 18, 18, 0.4);
+                        border-radius: $radius-10;
+                    }
+
+                    &:last-child {
+                        background: url(../img/blog_2_img_3.jpg) center center / cover no-repeat;
+                        width: 270px;
+                        height: 390px;
+                        position: relative;
+                        border-radius: $radius-10;
+                    }
+                }
+            }
+        }
+    
+        &-right {
+            width: 50%;
+            max-height: 720px;
+            display: flex;
+            flex-wrap: wrap;
+
+            &-col {
+                &-wide {
+                    background: url(../img/blog_2_img_6.jpg) center center / cover no-repeat;
+                    width: 570px;
+                    height: 270px;
+                    margin-top: 30px;
+                    position: relative;
+                    border-radius: $radius-10;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        background-color: rgba(175, 18, 18, 0.4);
+                        border-radius: $radius-10;
+                    }
+                }
+
+                &-regular {
+                    background: url(../img/blog_2_img_5.jpg) center center / cover no-repeat;
+                    width: 270px;
+                    height: 390px;
+                    position: relative;
+                    border-radius: $radius-10;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 0;
+                        background-color: rgba(175, 18, 18, 0.4);
+                        border-radius: $radius-10;
+                    }
+
+                    &:first-child {
+                        background: url(../img/blog_2_img_4.jpg) center center / cover no-repeat;
+                        width: 270px;
+                        height: 390px;
+                        margin-right: 30px;
+                        position: relative;
+                        border-radius: $radius-10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.article__photo {
+    &-left-col, &-right-col {
+
+        &-mount {
+            width: 130px;
+            display: flex;
+            height: 30px;
+            background: $white;
+            color: $black;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            position: relative;
+            float: right;
+            text-align: center;
+            align-content: center;
+            padding-left: 15px;
+            align-items: center;
+            margin: 25px 20px 0 0;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        &-link {
+            text-decoration: none;
+            @include font-large;
+            color: $white;
+            position: relative;
+            top: 115px;
+            left: 15px;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        &-span {
+            font-size: 14px;
+        }
+    }
+}
+
+.pos-t-l {
+    top: 200px;
+    left: 25px;
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+    .article {
+        &__text {
+            text-align: center;
+        }
+
+        &__photo {
+            width: 100%;
+            margin: 60px auto;
+            justify-content: center;
+
+            &-left {
+                width: 62%;
+            }
+
+            &-right {
+                width: 62%;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .article {
+        &__photo {
+            width: 100%;
+            margin: 60px auto;
+
+            &-left {
+                width: 80%;
+            }
+
+            &-right {
+                width: 80%;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .article {
+        min-height: 2200px;
+
+        &__photo {
+            width: 100%;
+
+            &-left {
+                width: 100%;
+                padding: 0 20px;
+                &-col {
+                    &-wide {
+                        width: 100%;
+                        margin-right: 0;
+                        max-height: 350px;
+                    }
+
+                    &-regular {
+                        width: 100%;
+                        margin-right: 0;
+                        max-height: 350px;
+                        &:last-child {
+                            width: 100%;
+                            margin-right: 0;
+                            max-height: 350px;
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                width: 100%;
+                padding: 0 20px;
+                margin-top: 310px;
+
+                &-col {
+                    &-wide {
+                        width: 100%;
+                        margin-right: 0;
+                        max-height: 350px;
+                    }
+
+                    &-regular {
+                        width: 100%;
+                        margin-right: 0;
+                        max-height: 350px;
+                        margin-top: 30px;
+
+                        &:first-child {
+                            width: 100%;
+                            margin-right: 0;
+                            max-height: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .article {
+        margin-top: 80px;
+    }
+}
+

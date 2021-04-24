@@ -1,0 +1,79 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.footer {
+    padding: 75px 0 65px 0;
+
+    &__col {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 40px;
+
+        &-item {
+            &-link {
+                padding: 0 15px;
+                @include font-standart;
+                color: $black;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    &__end {
+        margin-top: 20px;
+        text-align: center;
+
+        &-text {
+            @include font-standart;
+            color: $red;
+        }
+    }
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+    .footer__col-item-link {
+        font-size: 18px;
+    }
+    
+    .footer__end-text {
+        font-size: 18px;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+    .footer {
+        &__col {
+            flex-direction: column;
+
+            &-item {
+                padding: 20px 0;
+            }
+        }
+
+        &__end-text {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .footer {
+        padding: 30px 0 30px 0;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .footer__end-text {
+        font-size: 14px;
+    }
+}

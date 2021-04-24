@@ -1,0 +1,212 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.contact {
+    padding: 105px 0 100px 0;
+    background: url(../img/contact_1_bg@2x.jpg) center center / cover no-repeat;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(175, 18, 18, 0.5);
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &-title {
+            @include font-subtitle;
+            color: $white;
+            margin-bottom: 40px;
+        }
+
+        &-input {
+            display: flex;
+            flex-direction: row;
+
+            &-item {
+                width: 370px;
+                height: 50px;
+                outline: none;
+                background: transparent;
+                border-radius: 35px;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                text-align: start;
+                padding-left: 30px;
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0 15px 30px 15px;
+
+                &:focus {
+                    border-color: rgb(255, 255, 255);
+                }
+            }
+        }
+
+        &-area {
+            width: 770px;
+            height: 170px;
+            outline: none;
+            background: transparent;
+            border-radius: $radius-10;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            text-align: start;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 15px 25px;
+            margin-bottom: 40px;
+            resize: none;
+
+            &:focus {
+                border-color: rgb(255, 255, 255);
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+
+            &-checkbox {
+                padding-right: 400px;
+
+                &-link {
+                    @include font-standart;
+                    color: $white;
+                    vertical-align: bottom;
+                }
+            }    
+        }
+
+        &-btn {
+            &-link {
+                width: 200px;
+                height: 50px;
+                background-color: #f3cf15;
+                border: none;
+                outline: none;
+                border-radius: 35px;
+                @include font-medium;
+                color: $red;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #cbab0a;
+                }
+            }
+        }
+
+        &-line {
+            margin-top: 50px;
+            @include font-small;
+            color: $white;
+            letter-spacing: 1.5px;
+            font-weight: 400;
+            width: 70%;
+            text-align: center;
+            position: relative;
+        
+            &::before {
+                content: " ";
+                display: block;
+                position: absolute;
+                width: calc(100% / 2 - 60px);
+                left: 0;
+                top: 50%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        
+            &::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                width: calc(100% / 2 - 60px);
+                right: 0;
+                top: 50%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+        
+            &-phone {
+                margin-top: 35px;
+                @include font-large;
+                color: $white;
+            }
+        }
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 992px) {
+    .contact__head {
+        &-input-item {
+            width: 90%;
+        }
+
+        &-area {
+            width: 90%;
+        }
+
+        &-block {
+            justify-content: center;
+            &-checkbox {
+                padding-right: 80px;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .contact__head {
+        &-title {
+            font-size: 32px;
+        }
+
+        &-input {
+            flex-direction: column;
+        }
+
+        &-block {
+            justify-content: center;
+            &-checkbox {
+                padding-right: 40px;
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .contact {
+        padding: 60px 0;
+        
+        &__head-block {
+            flex-direction: column;
+            align-items: center;
+    
+            &-checkbox {
+                padding-right: 0px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .contact__head-btn-link {
+        width: 170px;
+        height: 45px;
+        font-size: 16px;
+    }
+}

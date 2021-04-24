@@ -1,0 +1,49 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.contact__head-block-checkbox-input[type="checkbox"] {
+    display: none;
+}
+
+.contact__head-block-checkbox-label {
+    color: $black;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 10px 0;
+    vertical-align: middle;
+    background: transparent;
+}
+
+.contact__head-block-checkbox-label:before {
+    content: " ";
+    color: $black;
+    display: inline-block;
+    font: 16px/20px "FontAwesome";
+    margin-right: 10px;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid $grey;
+    border-radius: 6px;
+    border-image: initial;
+    vertical-align: middle;
+}
+
+.contact__head-block-checkbox-input:checked + .contact__head-block-checkbox-label:before {
+    content: "\f00c";
+    background: $white;
+}
+
+.contact__head-block-checkbox-input:disabled + .contact__head-block-checkbox-label:before {
+    background: #eee;
+    color: #aaa;
+}
+
+.contact__head-input-item::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    transition: opacity 0.5s linear;
+}

@@ -1,0 +1,159 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.plan {
+    padding: 80px 0 70px 0;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+            @include font-small;
+            color: $red;
+            letter-spacing: 2px;
+        }
+
+        &-subtitle {
+            margin-top: 15px;
+            margin-bottom: 45px;
+            @include font-subtitle;
+        }
+    }
+
+    &__product {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    
+        &-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px;
+    
+            &-name {
+                @include font-large;
+                color: $black;
+            }
+    
+            &-price {
+                margin-top: 10px;
+                @include font-standart;
+                color: $red;
+            }
+    
+            &-ico {
+                margin: 25px 45px 0 45px;
+                width: 130px;
+                height: 130px;
+                background-color: $grey;
+                border-radius: 50%;
+                font-size: 62px;
+                color: $red;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            &-btn {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 163px;
+                height: 50px;
+                border: 2px solid $grey;
+                background: $white;
+                border-radius: 50px;
+                color: $black;
+                font-size: 18px;
+                cursor: pointer;
+    
+                &:hover {
+                    border: 2px solid $black;
+                    background: $black;
+                    color: $white;
+                }
+            }
+    
+            &-descr {
+                margin-top: 45px;
+                line-height: 25px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.f-62 {
+    font-size: 62px;
+    line-height: 72px;
+    color: $red;
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+    .plan__product {
+        flex-wrap: wrap;
+
+        &-col {
+            margin-top: 30px;
+            width: 34%;
+
+            &-name {
+                font-size: 30px;
+            }
+    
+            &-price {
+                font-size: 18px;
+            }
+    
+            &-ico {
+                width: 150px;
+                height: 150px;
+            }
+    
+            &-btn {
+                font-size: 20px;
+            }
+    
+            &-descr {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 992px) {
+    .plan__product {
+        &-col {
+            margin-top: 60px;
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .plan__product-col {
+        min-height: 578px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .plan__product-col {
+        width: 100%;
+        min-height: 100%;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .plan__text-subtitle {
+        text-align: center;
+    }
+}

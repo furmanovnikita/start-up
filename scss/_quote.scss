@@ -1,0 +1,57 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.quote {
+    padding: 75px 0;
+    text-align: center;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-text {
+            @include font-large;
+            color: $black;
+            margin: 35px 0 45px 0;
+        }
+
+        &-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        &-name {
+            margin-top: 20px;
+            @include font-medium;
+            color: $black;
+        }
+
+        &-subname {
+            @include font-small;    
+            color: $red;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.fas {
+    font-size: 30px;
+    line-height: 40px;
+    color: $grey;
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .quote {
+        padding: 30px 0;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .quote__block-text {
+        font-size: 16px;
+    }
+}

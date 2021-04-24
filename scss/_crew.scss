@@ -1,0 +1,156 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.crew {
+    padding: 105px 0 100px 0;
+    background: url(../img/team_2_bg@2x.jpg) center center / cover no-repeat;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(175, 18, 18, 0.4);
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &-title {
+            @include font-subtitle;
+            color: $white;
+        }
+
+        &-subtitle {
+            margin-top: 15px;
+            @include font-large;
+            color: $white;
+            opacity: 0.7;
+        }
+    }
+
+    &__body {
+        margin-top: 60px;
+        background: $white;
+        border-radius: $radius-10;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+    
+        &-block {
+            padding: 65px 0 70px 0;
+            width: 33.5%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-right: 2px solid #dedede;
+            
+            &:last-child {
+                border-right: none;
+                border-bottom: none;
+            }
+
+            &-ico {
+                border-radius: 50%;
+            }
+    
+            &-name {
+                @include font-large;
+                color: $black;
+                margin: 30px 0 15px 0;
+            }
+    
+            &-social {
+                &-link {
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        margin-top: 70px;
+        text-align: center;
+        position: relative;
+    
+        &-btn {
+            width: 198px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            color: $white;
+            background: transparent;
+            font-size: 18px;
+            font-weight: 500;
+            outline: none;
+            cursor: pointer;
+    
+            &:hover {
+                border: 2px solid rgb(255, 255, 255);
+            }
+        }
+    }
+}
+.f-22 {
+    @include font-large;
+    color: $red;
+
+    &:hover {
+        color: #d41010;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .crew {
+        &__head {
+            &-title {
+             font-size: 32px;
+            }
+
+            &-subtitle {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        &__body {
+            margin: 60px auto 0 auto;
+            width: 75%;
+            flex-direction: column;
+
+            &-block {
+                padding: 40px 0 50px 0;
+                width: 100%;
+                border-bottom: 2px solid #dedede;
+                border-right: none;
+            }
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .crew {
+        padding: 105px 15px 100px 15px;
+
+        &__head-subtitle {
+            text-align: center;
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .crew__body {
+        width: 100%;
+    }
+}

@@ -1,0 +1,124 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.works {
+    padding-top: 105px;
+    padding-bottom: 90px;
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-title {
+            @include font-subtitle;
+        }
+
+        &-subtitle {
+            margin: 15px 0 25px 0;
+            @include font-large;
+            color: $red;
+            line-height: 32px;
+            text-align: center;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        &-block {
+            margin-top: 50px;
+
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            &-pic {
+                &-img {
+                border-radius: $radius-10;
+                }
+            }
+    
+            &-flex {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                &-link {
+                    @include font-large;
+                    color: $black;
+                    margin: 20px 0 15px 0;
+                    display: block;
+                }
+    
+                &-sublink {
+                    @include font-small;
+                    color: $red;
+                    letter-spacing: 2px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/* Large desktops and laptops */
+@media (max-width: 1200px) {
+    .works__gallery {
+        padding: 0 50px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 992px) {
+    .works__gallery {
+        &-block {
+            margin: 50px auto 0 auto;
+
+            &-flex-link {
+                font-size: 25px;
+            }
+
+            &-flex-sublink {
+                font-size: 17px;
+            }
+
+            &-pic-img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .works__head-subtitle {
+        font-size: 18px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .works {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .works__gallery-block-flex {
+        &-link {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        &-sublink {
+            font-size: 14px;
+        }
+    }
+}

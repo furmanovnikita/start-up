@@ -1,0 +1,53 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.main {
+    margin-top: 105px;
+}
+.snipp {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    &__title {
+        @include font-title;
+    }
+
+    &__subtitle {
+        @include font-medium;
+        color: $red;
+        margin-top: 35px;
+        opacity: 0.7;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .snipp {
+        &__title {
+            font-size: 42px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 575px) {
+    .main {
+        margin-top: 80px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .snipp {
+        &__title {
+            font-size: 35px;
+        }
+    }
+}
